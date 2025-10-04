@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neutral-000: #ffffff;
+  --color-neutral-100: #f6f6f7;
+  --color-neutral-200: #e9ebed;
+  --color-neutral-300: #d1d5da;
+  --color-neutral-400: #9da7b2;
+  --color-neutral-500: #778089;
+  --color-neutral-600: #545a61;
+  --color-neutral-700: #353a3e;
+  --color-neutral-800: #181a1c;
+  --color-neutral-900: #060b10;
+
+  --color-teal-000: #defffe;
+  --color-teal-100: #8efbf7;
+  --color-teal-200: #32e6e2;
+  --color-teal-300: #14d8d4;
+  --color-teal-400: #05bdba;
+  --color-teal-500: #04a29f;
+  --color-teal-600: #02807d;
+  --color-teal-700: #016968;
+  --color-teal-800: #014847;
+  --color-teal-900: #0c2a2a;
+
+  --color-green-000: #e7fce9;
+  --color-green-100: #bef9c6;
+  --color-green-200: #93f5a5;
+  --color-green-300: #64d87f;
+  --color-green-400: #3ac364;
+  --color-green-500: #31a855;
+  --color-green-600: #228240;
+  --color-green-700: #1a6b34;
+  --color-green-800: #0f4a21;
+  --color-green-900: #152a19;
+
+  --color-gold-000: #fdf5d8;
+  --color-gold-100: #f6e0a5;
+  --color-gold-200: #facd6f;
+  --color-gold-300: #fbb13d;
+  --color-gold-400: #f98e21;
+  --color-gold-500: #d5771a;
+  --color-gold-600: #a85d13;
+  --color-gold-700: #8c4c0d;
+  --color-gold-800: #603408;
+  --color-gold-900: #332213;
+
+  --color-red-000: #fbeeed;
+  --color-red-100: #fbd3d0;
+  --color-red-200: #ffbdba;
+  --color-red-300: #ffada9;
+  --color-red-400: #fe8382;
+  --color-red-500: #fe4e5c;
+  --color-red-600: #d62740;
+  --color-red-700: #af2536;
+  --color-red-800: #800a20;
+  --color-red-900: #3d1c1b;
+
+  --color-pink-000: #fcf0fb;
+  --color-pink-100: #f6d2f2;
+  --color-pink-200: #f7bcf3;
+  --color-pink-300: #f3a8ee;
+  --color-pink-400: #ef7feb;
+  --color-pink-500: #df5adc;
+  --color-pink-600: #b938b8;
+  --color-pink-700: #9a2d99;
+  --color-pink-800: #6c1d6b;
+  --color-pink-900: #381b37;
+
+  --color-purple-000: #f5f2fc;
+  --color-purple-100: #e2d9f7;
+  --color-purple-200: #d8c7ff;
+  --color-purple-300: #cab9f4;
+  --color-purple-400: #b49df1;
+  --color-purple-500: #9b80ed;
+  --color-purple-600: #775ce7;
+  --color-purple-700: #614aca;
+  --color-purple-800: #382aa4;
+  --color-purple-900: #292142;
+
+  --color-blue-000: #edf4ff;
+  --color-blue-100: #cde2ff;
+  --color-blue-200: #b5d2fb;
+  --color-blue-300: #9cbef6;
+  --color-blue-400: #80abfa;
+  --color-blue-500: #5d8df5;
+  --color-blue-600: #316bf4;
+  --color-blue-700: #2e51ed;
+  --color-blue-800: #2036a1;
+  --color-blue-900: #1b205b;
+
+  --font-family-text: "Instrument Sans", system-ui, Helvetica, sans-serif;
+  --font-family-display: "Figtree", system-ui, Helvetica, sans-serif;
+  --font-family-mono:
+    "Martian Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+    Consolas, "DejaVu Sans Mono", monospace;
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-family-text);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-display);
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: var(--font-family-mono);
+  }
+}
