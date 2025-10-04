@@ -1,75 +1,137 @@
-# NTL DEPLOY Challenge
+# Social Media Management Dashboard
 
-A sleek, modern landing page for the Netlify Deploy Challenge built with React, TypeScript, Tailwind CSS v4, and Vite.
+A comprehensive social media management dashboard for content creators to view statistics across popular platforms like Facebook, Instagram, Twitter, and LinkedIn. Built with React, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- **Modern Design System**: Custom color palette with teal gradients and neutral tones
-- **Typography**: Figtree for headings, Instrument Sans for body text, Martian Mono for code
-- **Interactive Flow**: Smooth scrolling between sections with animated down arrows
-- **Challenge Instructions**: Copy-to-clipboard functionality for Agent Runners prompt
-- **Social Sharing**: Twitter/X and email integration for challenge completion
-- **Responsive**: Mobile-first design that scales beautifully on all devices
-- **Animations**: Bouncing arrows, texture backgrounds, and smooth transitions
+- **Multi-Platform Analytics**: Track metrics across Facebook, Instagram, Twitter, and LinkedIn
+- **Real-time Dashboard**: View follower counts, engagement rates, and performance trends
+- **User Authentication**: Secure OAuth-based login system
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Data Visualization**: Interactive charts and graphs using Recharts
+- **Dark Theme**: Modern dark UI matching the provided design
 
 ## Tech Stack
 
-- **React 18** with TypeScript
-- **Tailwind CSS v4** with CSS variables and `@theme` directive
-- **Vite** for fast development and building
-- **Lucide React** for icons
-- **Google Fonts** for custom typography
+- **Frontend**: React 19, TypeScript, Tailwind CSS
+- **Charts**: Recharts
+- **Icons**: Lucide React
+- **Routing**: React Router DOM
+- **Build Tool**: Vite
+- **Deployment**: Netlify
 
 ## Getting Started
 
-1. Install dependencies:
+1. Clone this repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Build for production: `npm run build`
 
-   ```bash
-   npm install
-   ```
+## Authentication
 
-2. Start the development server:
+The app includes a mock authentication system. Use any email/password combination to log in during development.
 
-   ```bash
-   npm run dev
-   ```
+## API Integration Setup
 
-3. Open [http://localhost:5173](http://localhost:5173) to view the app
+To connect real social media platforms, you'll need to:
 
-## Design System
+### 1. Facebook/Instagram (Meta)
+- Create a Facebook Developer account at https://developers.facebook.com/
+- Create a new app and get your App ID and App Secret
+- Add Instagram Basic Display API for Instagram integration
+- Configure OAuth redirect URLs
 
-### Colors
+### 2. Twitter (X)
+- Create a Twitter Developer account at https://developer.twitter.com/
+- Create a new app and get your API Key and Secret
+- Enable OAuth 2.0 and configure callback URLs
 
-- **Neutrals**: 9-step grayscale from white (000) to dark (900)
-- **Teal**: Primary brand color with 10 shades
-- **Additional**: Full color palettes for green, gold, red, pink, purple, and blue
+### 3. LinkedIn
+- Create a LinkedIn Developer account at https://www.linkedin.com/developers/
+- Create a new app and get your Client ID and Client Secret
+- Add required scopes for profile and company data
 
-### Typography
+### 4. Environment Variables
+Create a `.env` file in the root directory:
 
-- **Display**: Figtree - Used for headings and prominent text
-- **Text**: Instrument Sans - Used for body text and UI elements
-- **Mono**: Martian Mono - Used for code blocks and technical content
-
-### Components
-
-- **Hero**: Full-screen intro with gradient background and call-to-action
-- **Instructions**: Challenge prompt with copy functionality
-- **Share**: Social sharing buttons and completion flow
-- **Responsive**: All sections adapt to full viewport height
-
-## Challenge Flow
-
-1. **Hero Section**: Introduction and "Let's go!" button
-2. **Instructions**: Agent Runners prompt with copy button
-3. **Share**: Social sharing and email options
-4. **Completion**: "Happy building!" message with Netlify logo
-
-## Building
-
-```bash
-npm run build
+```env
+VITE_FACEBOOK_APP_ID=your_facebook_app_id
+VITE_FACEBOOK_APP_SECRET=your_facebook_app_secret
+VITE_TWITTER_API_KEY=your_twitter_api_key
+VITE_TWITTER_API_SECRET=your_twitter_api_secret
+VITE_LINKEDIN_CLIENT_ID=your_linkedin_client_id
+VITE_LINKEDIN_CLIENT_SECRET=your_linkedin_client_secret
 ```
+
+## Security Measures
+
+- **OAuth 2.0**: Secure authentication flow for all platforms
+- **Token Management**: Secure storage and refresh of access tokens
+- **HTTPS Only**: All API calls made over secure connections
+- **Data Encryption**: Sensitive data encrypted in transit and at rest
+- **Rate Limiting**: Respect platform API rate limits
+- **CORS Configuration**: Proper cross-origin resource sharing setup
+
+## Platform Compliance
+
+- **Facebook/Instagram**: Complies with Meta Platform Policy
+- **Twitter**: Follows Twitter Developer Agreement
+- **LinkedIn**: Adheres to LinkedIn API Terms of Use
+- **Data Privacy**: GDPR and CCPA compliant data handling
 
 ## Deployment
 
-This project is designed to be deployed on Netlify. Simply connect your repository and deploy!
+This app is configured to deploy automatically to Netlify:
+
+1. Connect your GitHub repository to Netlify
+2. Set environment variables in Netlify dashboard
+3. Deploy automatically on push to main branch
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint code
+npm run lint
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── dashboard/
+│   │   ├── Header.tsx
+│   │   ├── Sidebar.tsx
+│   │   ├── Overview.tsx
+│   │   └── Analytics.tsx
+│   ├── Dashboard.tsx
+│   └── Login.tsx
+├── contexts/
+│   └── AuthContext.tsx
+├── App.tsx
+└── main.tsx
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## License
+
+MIT License - see LICENSE file for details
